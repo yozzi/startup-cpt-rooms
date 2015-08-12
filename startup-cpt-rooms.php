@@ -111,13 +111,31 @@ function startup_reloaded_metabox_rooms() {
 		'object_types'  => array( 'rooms' )
 	) );
     
-    $cmb_box->add_field( array(
-        'name'             => __( 'Icon', 'cmb2' ),
-        'desc'             => __( 'The service icon', 'cmb2' ),
-        'id'               => $prefix . 'icon',
+    $services = $cmb_box->add_field( array(
+		'id'          => $prefix . 'services',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Service {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+			'remove_button' => __( 'Remove Entry', 'cmb2' ),
+			'sortable'      => true, // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+    
+    $cmb_box->add_group_field( $services, array(
+        'name'             => __( 'Service name', 'cmb2' ),
+        'id'               => 'service',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $services, array(
+        'name'             => __( 'Service icon', 'cmb2' ),
+        'id'               => 'service-icon',
         'type'             => 'select',
         'show_option_none' => true,
         'options'          => $font_awesome
     ) );
+    
 }
 ?>
