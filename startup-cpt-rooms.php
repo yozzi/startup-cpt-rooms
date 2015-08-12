@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: StartUp Rooms Custom Post
-Description: Le plugin pour lactiver le Custom Post Rooms
+Description: Le plugin pour activer le Custom Post Rooms
 Author: Yann Caplain
 Version: 0.1 alpha
 */
