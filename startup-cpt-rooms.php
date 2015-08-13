@@ -44,7 +44,7 @@ function startup_reloaded_rooms() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'room'
+		'capability_type'     => 'page'
 	);
 	register_post_type( 'rooms', $args );
 
