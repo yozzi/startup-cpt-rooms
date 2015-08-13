@@ -54,9 +54,9 @@ add_action( 'init', 'startup_reloaded_rooms', 0 );
 
 // Capabilities
 
-register_activation_hook( __FILE__, 'my_custom_caps' );
+register_activation_hook( __FILE__, 'startup_reloaded_rooms_caps' );
 
-function my_custom_caps() {
+function startup_reloaded_rooms_caps() {
 	
 	$role_admin = get_role( 'administrator' );
 	
@@ -112,18 +112,18 @@ function startup_reloaded_room_types() {
 add_action( 'init', 'startup_reloaded_room_types', 0 );
 
 // Retirer la boite de la taxonomie sur le coté
-function startup_reloaded_remove_room_types_metabox() {
+function startup_reloaded_room_types_metabox_remove() {
 	remove_meta_box( 'tagsdiv-room-type', 'rooms', 'side' );
     // tagsdiv-project_types pour les taxonomies type tags
     // custom_taxonomy_slugdiv pour les taxonomies type categories
 }
 
-add_action( 'admin_menu' , 'startup_reloaded_remove_room_types_metabox' );
+add_action( 'admin_menu' , 'startup_reloaded_room_types_metabox_remove' );
 
 // Metaboxes
-add_action( 'cmb2_init', 'startup_reloaded_metabox_rooms' );
+add_action( 'cmb2_init', 'startup_reloaded_rooms_meta' );
 
-function startup_reloaded_metabox_rooms() {
+function startup_reloaded_rooms_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
 	// Start with an underscore to hide fields from custom fields list
