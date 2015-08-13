@@ -44,12 +44,36 @@ function startup_reloaded_rooms() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'room'
+        'capability_type'     => array('room','rooms'),
+        'map_meta_cap'        => true
 	);
 	register_post_type( 'rooms', $args );
 
 }
 add_action( 'init', 'startup_reloaded_rooms', 0 );
+
+// Capabilities
+
+register_activation_hook( __FILE__, 'my_custom_caps' );
+
+function my_custom_caps() {
+	
+	$role_admin = get_role( 'administrator' );
+	
+	$role_admin->add_cap( 'edit_room' );
+	$role_admin->add_cap( 'read_room' );
+	$role_admin->add_cap( 'delete_room' );
+	$role_admin->add_cap( 'edit_others_rooms' );
+	$role_admin->add_cap( 'publish_rooms' );
+	$role_admin->add_cap( 'edit_rooms' );
+	$role_admin->add_cap( 'read_private_rooms' );
+	$role_admin->add_cap( 'delete_rooms' );
+	$role_admin->add_cap( 'delete_private_rooms' );
+	$role_admin->add_cap( 'delete_published_rooms' );
+	$role_admin->add_cap( 'delete_others_rooms' );
+	$role_admin->add_cap( 'edit_private_rooms' );
+	$role_admin->add_cap( 'edit_published_rooms' );
+}
 
 // Room types taxonomy
 function startup_reloaded_room_types() {
