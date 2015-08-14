@@ -8,7 +8,6 @@ Version: 0.1 alpha
 
 //CPT
 function startup_reloaded_rooms() {
-
 	$labels = array(
 		'name'                => _x( 'Rooms', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'Room', 'Post Type Singular Name', 'text_domain' ),
@@ -50,16 +49,13 @@ function startup_reloaded_rooms() {
 	register_post_type( 'rooms', $args );
 
 }
+
 add_action( 'init', 'startup_reloaded_rooms', 0 );
 
 // Capabilities
 
-register_activation_hook( __FILE__, 'startup_reloaded_rooms_caps' );
-
 function startup_reloaded_rooms_caps() {
-	
 	$role_admin = get_role( 'administrator' );
-	
 	$role_admin->add_cap( 'edit_room' );
 	$role_admin->add_cap( 'read_room' );
 	$role_admin->add_cap( 'delete_room' );
@@ -75,9 +71,10 @@ function startup_reloaded_rooms_caps() {
 	$role_admin->add_cap( 'edit_published_rooms' );
 }
 
+register_activation_hook( __FILE__, 'startup_reloaded_rooms_caps' );
+
 // Room types taxonomy
 function startup_reloaded_room_types() {
-
 	$labels = array(
 		'name'                       => _x( 'Types', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'Type', 'Taxonomy Singular Name', 'text_domain' ),
@@ -109,6 +106,7 @@ function startup_reloaded_room_types() {
 	register_taxonomy( 'room-type', array( 'rooms' ), $args );
 
 }
+
 add_action( 'init', 'startup_reloaded_room_types', 0 );
 
 // Retirer la boite de la taxonomie sur le coté
@@ -121,8 +119,6 @@ function startup_reloaded_room_types_metabox_remove() {
 add_action( 'admin_menu' , 'startup_reloaded_room_types_metabox_remove' );
 
 // Metaboxes
-add_action( 'cmb2_init', 'startup_reloaded_rooms_meta' );
-
 function startup_reloaded_rooms_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
@@ -160,6 +156,7 @@ function startup_reloaded_rooms_meta() {
         'show_option_none' => true,
         'options'          => $font_awesome
     ) );
-    
 }
+
+add_action( 'cmb2_init', 'startup_reloaded_rooms_meta' );
 ?>
