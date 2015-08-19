@@ -3,7 +3,7 @@
 Plugin Name: StartUp Rooms
 Description: Le plugin pour activer le Custom Post Rooms
 Author: Yann Caplain
-Version: 0.3.0
+Version: 0.4.0
 */
 
 //GitHub Plugin Updater
