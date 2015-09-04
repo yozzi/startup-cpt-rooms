@@ -35,7 +35,7 @@ function startup_reloaded_rooms() {
 	$labels = array(
 		'name'                => _x( 'Rooms', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'Room', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Rooms', 'text_domain' ),
+		'menu_name'           => __( 'Rooms (b)', 'text_domain' ),
 		'name_admin_bar'      => __( 'Rooms', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
 		'all_items'           => __( 'All Items', 'text_domain' ),
