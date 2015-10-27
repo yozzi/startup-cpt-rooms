@@ -76,7 +76,7 @@ function startup_reloaded_rooms() {
 
 add_action( 'init', 'startup_reloaded_rooms', 0 );
 
-//Flusher les permalink à l'activation du plgin pour qu'ils fonctionnent sans mise à jour manuelle
+//Flusher les permalink à l'activation du plugin pour qu'ils fonctionnent sans mise à jour manuelle
 function startup_reloaded_rooms_rewrite_flush() {
     startup_reloaded_rooms();
     flush_rewrite_rules();
@@ -190,5 +190,5 @@ function startup_reloaded_rooms_meta() {
     ) );
 }
 
-add_action( 'cmb2_init', 'startup_reloaded_rooms_meta' );
+add_action( 'cmb2_admin_init', 'startup_reloaded_rooms_meta' );
 ?>
