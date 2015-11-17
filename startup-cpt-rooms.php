@@ -34,25 +34,25 @@ add_action( 'init', 'startup_reloaded_rooms_updater' );
 //CPT
 function startup_reloaded_rooms() {
 	$labels = array(
-		'name'                => _x( 'Rooms', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Room', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Rooms (b)', 'text_domain' ),
-		'name_admin_bar'      => __( 'Rooms', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Items', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Item', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'new_item'            => __( 'New Item', 'text_domain' ),
-		'edit_item'           => __( 'Edit Item', 'text_domain' ),
-		'update_item'         => __( 'Update Item', 'text_domain' ),
-		'view_item'           => __( 'View Item', 'text_domain' ),
-		'search_items'        => __( 'Search Item', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' )
+		'name'                => _x( 'Rooms', 'Post Type General Name', 'startup-cpt-rooms' ),
+		'singular_name'       => _x( 'Room', 'Post Type Singular Name', 'startup-cpt-rooms' ),
+		'menu_name'           => __( 'Rooms (b)', 'startup-cpt-rooms' ),
+		'name_admin_bar'      => __( 'Rooms', 'startup-cpt-rooms' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'startup-cpt-rooms' ),
+		'all_items'           => __( 'All Items', 'startup-cpt-rooms' ),
+		'add_new_item'        => __( 'Add New Item', 'startup-cpt-rooms' ),
+		'add_new'             => __( 'Add New', 'startup-cpt-rooms' ),
+		'new_item'            => __( 'New Item', 'startup-cpt-rooms' ),
+		'edit_item'           => __( 'Edit Item', 'startup-cpt-rooms' ),
+		'update_item'         => __( 'Update Item', 'startup-cpt-rooms' ),
+		'view_item'           => __( 'View Item', 'startup-cpt-rooms' ),
+		'search_items'        => __( 'Search Item', 'startup-cpt-rooms' ),
+		'not_found'           => __( 'Not found', 'startup-cpt-rooms' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'startup-cpt-rooms' )
 	);
 	$args = array(
-		'label'               => __( 'projects', 'text_domain' ),
-		'description'         => __( 'Post Type Description', 'text_domain' ),
+		'label'               => __( 'projects', 'startup-cpt-rooms' ),
+		'description'         => __( 'Post Type Description', 'startup-cpt-rooms' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'revisions' ),
 		//'taxonomies'          => array( 'project_types' ),
@@ -109,23 +109,23 @@ register_activation_hook( __FILE__, 'startup_reloaded_rooms_caps' );
 // Room types taxonomy
 function startup_reloaded_room_types() {
 	$labels = array(
-		'name'                       => _x( 'Room Types', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Room Type', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Room Types', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' )
+		'name'                       => _x( 'Room Types', 'Taxonomy General Name', 'startup-cpt-rooms' ),
+		'singular_name'              => _x( 'Room Type', 'Taxonomy Singular Name', 'startup-cpt-rooms' ),
+		'menu_name'                  => __( 'Room Types', 'startup-cpt-rooms' ),
+		'all_items'                  => __( 'All Items', 'startup-cpt-rooms' ),
+		'parent_item'                => __( 'Parent Item', 'startup-cpt-rooms' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'startup-cpt-rooms' ),
+		'new_item_name'              => __( 'New Item Name', 'startup-cpt-rooms' ),
+		'add_new_item'               => __( 'Add New Item', 'startup-cpt-rooms' ),
+		'edit_item'                  => __( 'Edit Item', 'startup-cpt-rooms' ),
+		'update_item'                => __( 'Update Item', 'startup-cpt-rooms' ),
+		'view_item'                  => __( 'View Item', 'startup-cpt-rooms' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'startup-cpt-rooms' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'startup-cpt-rooms' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-rooms' ),
+		'popular_items'              => __( 'Popular Items', 'startup-cpt-rooms' ),
+		'search_items'               => __( 'Search Items', 'startup-cpt-rooms' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-rooms' )
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -160,7 +160,7 @@ function startup_reloaded_rooms_meta() {
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Room details', 'cmb2' ),
+		'title'         => __( 'Room details', 'startup-cpt-rooms' ),
 		'object_types'  => array( 'rooms' )
 	) );
     
@@ -168,22 +168,22 @@ function startup_reloaded_rooms_meta() {
 		'id'          => $prefix . 'services',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Service {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
-			'remove_button' => __( 'Remove Entry', 'cmb2' ),
+			'group_title'   => __( 'Service {#}', 'startup-cpt-rooms' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Entry', 'startup-cpt-rooms' ),
+			'remove_button' => __( 'Remove Entry', 'startup-cpt-rooms' ),
 			'sortable'      => true, // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		),
 	) );
     
     $cmb_box->add_group_field( $services, array(
-        'name'             => __( 'Service name', 'cmb2' ),
+        'name'             => __( 'Service name', 'startup-cpt-rooms' ),
         'id'               => 'service',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $services, array(
-        'name'             => __( 'Service icon', 'cmb2' ),
+        'name'             => __( 'Service icon', 'startup-cpt-rooms' ),
         'id'               => 'service-icon',
         'type'             => 'select',
         'show_option_none' => true,
