@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 //GitHub Plugin Updater
-function startup_reloaded_rooms_updater() {
+function startup_cpt_rooms_updater() {
 	include_once 'lib/updater.php';
 	//define( 'WP_GITHUB_FORCE_UPDATE', true );
 	if ( is_admin() ) {
@@ -34,10 +34,10 @@ function startup_reloaded_rooms_updater() {
 	}
 }
 
-//add_action( 'init', 'startup_reloaded_rooms_updater' );
+//add_action( 'init', 'startup_cpt_rooms_updater' );
 
 //CPT
-function startup_reloaded_rooms() {
+function startup_cpt_rooms() {
 	$labels = array(
 		'name'                => _x( 'Rooms', 'Post Type General Name', 'startup-cpt-rooms' ),
 		'singular_name'       => _x( 'Room', 'Post Type Singular Name', 'startup-cpt-rooms' ),
@@ -80,19 +80,19 @@ function startup_reloaded_rooms() {
 
 }
 
-add_action( 'init', 'startup_reloaded_rooms', 0 );
+add_action( 'init', 'startup_cpt_rooms', 0 );
 
 //Flusher les permalink à l'activation du plugin pour qu'ils fonctionnent sans mise à jour manuelle
-function startup_reloaded_rooms_rewrite_flush() {
-    startup_reloaded_rooms();
+function startup_cpt_rooms_rewrite_flush() {
+    startup_cpt_rooms();
     flush_rewrite_rules();
 }
 
-register_activation_hook( __FILE__, 'startup_reloaded_rooms_rewrite_flush' );
+register_activation_hook( __FILE__, 'startup_cpt_rooms_rewrite_flush' );
 
 // Capabilities
 
-function startup_reloaded_rooms_caps() {
+function startup_cpt_rooms_caps() {
 	$role_admin = get_role( 'administrator' );
 	$role_admin->add_cap( 'edit_room' );
 	$role_admin->add_cap( 'read_room' );
@@ -109,7 +109,7 @@ function startup_reloaded_rooms_caps() {
 	$role_admin->add_cap( 'edit_published_rooms' );
 }
 
-register_activation_hook( __FILE__, 'startup_reloaded_rooms_caps' );
+register_activation_hook( __FILE__, 'startup_cpt_rooms_caps' );
 
 // Room types taxonomy
 function startup_reloaded_room_types() {
@@ -157,11 +157,11 @@ function startup_reloaded_room_types_metabox_remove() {
 add_action( 'admin_menu' , 'startup_reloaded_room_types_metabox_remove' );
 
 // Metaboxes
-function startup_reloaded_rooms_meta() {
+function startup_cpt_rooms_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_startup_reloaded_rooms_';
+	$prefix = '_startup_cpt_rooms_';
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
@@ -196,5 +196,5 @@ function startup_reloaded_rooms_meta() {
     ) );
 }
 
-add_action( 'cmb2_admin_init', 'startup_reloaded_rooms_meta' );
+add_action( 'cmb2_admin_init', 'startup_cpt_rooms_meta' );
 ?>
