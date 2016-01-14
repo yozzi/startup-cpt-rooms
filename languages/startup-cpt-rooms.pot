@@ -1,0 +1,191 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: StartUp CPT Rooms\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Jan 14 2016 08:58:32 GMT-0500 (Est)\n"
+"POT-Revision-Date: Thu Jan 14 2016 08:58:38 GMT-0500 (Est)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "StartUp CPT Rooms"
+msgstr ""
+
+#. Description of the plugin
+msgid "Le plugin pour activer le Custom Post Rooms"
+msgstr ""
+
+#. Author of the plugin
+msgid "Yann Caplain"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:43
+msgctxt "Post Type General Name"
+msgid "Rooms"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:44
+msgctxt "Post Type Singular Name"
+msgid "Room"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:45
+msgid "Rooms (b)"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:46
+msgid "Rooms"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:47 ../startup-cpt-rooms.php:123
+msgid "Parent Item:"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:48 ../startup-cpt-rooms.php:121
+msgid "All Items"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:49 ../startup-cpt-rooms.php:125
+msgid "Add New Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:50
+msgid "Add New"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:51
+msgid "New Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:52 ../startup-cpt-rooms.php:126
+msgid "Edit Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:53 ../startup-cpt-rooms.php:127
+msgid "Update Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:54 ../startup-cpt-rooms.php:128
+msgid "View Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:55
+msgid "Search Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:56
+msgid "Not found"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:57
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:60
+msgid "projects"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:61
+msgid "Post Type Description"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:118
+msgctxt "Taxonomy General Name"
+msgid "Room Types"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:119
+msgctxt "Taxonomy Singular Name"
+msgid "Room Type"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:120
+msgid "Room Types"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:122
+msgid "Parent Item"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:124
+msgid "New Item Name"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:129
+msgid "Separate items with commas"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:130
+msgid "Add or remove items"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:131
+msgid "Choose from the most used"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:132
+msgid "Popular Items"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:133
+msgid "Search Items"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:134
+msgid "Not Found"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:173
+msgid "CMB2 plugin or StartUp Reloaded theme must be active to use custom metaboxes."
+msgstr ""
+
+#: ../startup-cpt-rooms.php:188
+msgid "Room details"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:196
+msgid "Service {#}"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:197
+msgid "Add Another Entry"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:198
+msgid "Remove Entry"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:205
+msgid "Service name"
+msgstr ""
+
+#: ../startup-cpt-rooms.php:211
+msgid "Service icon"
+msgstr ""
+
+#: ../lib/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+
+#: ../lib/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
