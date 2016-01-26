@@ -3,7 +3,7 @@
 Plugin Name: StartUp CPT Rooms
 Description: Le plugin pour activer le Custom Post Rooms
 Author: Yann Caplain
-Version: 0.3.0
+Version: 1.0.0
 Text Domain: startup-cpt-rooms
 Domain Path: /languages
 */
