@@ -181,7 +181,7 @@ if ( !function_exists( 'cmb2_detection' ) ) {
 }
 
 function startup_cpt_rooms_meta() {
-    require get_template_directory() . '/inc/font-awesome.php';
+    require ABSPATH . 'wp-content/plugins/startup-cpt-rooms/inc/font-awesome.php';
     
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_startup_cpt_rooms_';
