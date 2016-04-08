@@ -166,7 +166,7 @@ add_action( 'admin_menu' , 'startup_reloaded_room_types_metabox_remove' );
  */
 if ( !function_exists( 'cmb2_detection' ) ) {
     function cmb2_detection() {
-        if ( !is_plugin_active('CMB2/init.php')  && !function_exists( 'startup_reloaded_setup' ) ) {
+        if ( !defined( 'CMB2_LOADED' ) ) {
             add_action( 'admin_notices', 'cmb2_notice' );
         }
     }
