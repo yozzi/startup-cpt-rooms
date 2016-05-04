@@ -16,6 +16,9 @@ if ( ! defined( 'WPINC' ) ) {
 //Include this to check if a plugin is activated with is_plugin_active
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
+//Include this to check dependencies
+include_once( 'inc/dependencies.php' );
+
 //GitHub Plugin Updater
 function startup_cpt_rooms_updater() {
 	include_once 'lib/updater.php';
@@ -161,25 +164,6 @@ function startup_reloaded_room_types_metabox_remove() {
 add_action( 'admin_menu' , 'startup_reloaded_room_types_metabox_remove' );
 
 // Metaboxes
-/**
- * Detection de CMB2. Identique dans tous les plugins.
- */
-if ( !function_exists( 'cmb2_detection' ) ) {
-    function cmb2_detection() {
-        if ( !defined( 'CMB2_LOADED' ) ) {
-            add_action( 'admin_notices', 'cmb2_notice' );
-        }
-    }
-
-    function cmb2_notice() {
-        if ( current_user_can( 'activate_plugins' ) ) {
-            echo '<div class="error message"><p>' . __( 'CMB2 plugin or StartUp Reloaded theme must be active to use custom metaboxes.', 'startup-cpt-rooms' ) . '</p></div>';
-        }
-    }
-
-    add_action( 'init', 'cmb2_detection' );
-}
-
 function startup_cpt_rooms_meta() {
     require ABSPATH . 'wp-content/plugins/startup-cpt-rooms/inc/font-awesome.php';
     
